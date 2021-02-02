@@ -18,6 +18,16 @@
     <label>USD: </label><br/>
     <input type="text" name="usd" placeholder="USD" value="0"/><br/>
     <input type="submit" id="submit" value="Converter"/>
+
+    <%
+    float rate1 = Float.parseFloat(request.getParameter("rate1"));
+    float usd1 = Float.parseFloat(request.getParameter("usd1"));
+
+    float vnd1 = rate1 * usd1;
+    %>
+    <h1>Rate: <%=rate1%></h1>
+    <h1>USD: <%=usd1%></h1>
+    <h1>VND: <%=vnd1%></h1>
 </form>
 </body>
 </html>
